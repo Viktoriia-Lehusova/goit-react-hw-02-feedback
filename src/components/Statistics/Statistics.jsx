@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Notification from 'components/Notification';
+import { Subtitle } from './Statistics.styled';
 
 export const Statistics = ({ good, neutral, bad, total, positivePercentage }) =>
   total ? (
     <div>
-      <p>Good:{good}</p>
-      <p>Neutral:{neutral}</p>
-      <p>Bad:{bad}</p>
-      <p>Total:{total}</p>
-      <p>Positive feedback:{positivePercentage}%</p>
+      <Subtitle>Good: {good}</Subtitle>
+      <Subtitle>Neutral: {neutral}</Subtitle>
+      <Subtitle>Bad: {bad}</Subtitle>
+      <Subtitle>Total: {total}</Subtitle>
+      <Subtitle>Positive feedback: {positivePercentage}%</Subtitle>
     </div>
   ) : (
     <Notification message="There is no feedback" />
